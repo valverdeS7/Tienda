@@ -1,0 +1,12 @@
+{
+    "elements": {},
+    "attributes": {
+        "\".jpg\"": {
+            "context": "img"
+        },
+        "\".png\"": {},
+        ".jpg\"": {
+            "context": "img"
+        }
+    }
+}
