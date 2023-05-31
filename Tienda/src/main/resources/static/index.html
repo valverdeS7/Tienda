@@ -1,73 +1,170 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title>Tienda en línea</title>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: whitesmoke;
-        }
+    <head>
+        <title>Tienda en línea</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: whitesmoke;
+            }
 
-        h1 {
-            color: black;
-            text-align: right;
-            text-transform: uppercase; /* Transformación de texto a mayúsculas */
-        }
+            h1 {
+                color: black;
+                text-align: center;
+                text-transform: uppercase;
+            }
 
-        p {
-            color: rgba(0, 0, 0, 0.5);
-        }
+            p {
+                color: rgba(0, 0, 0, 0.5);
+            }
 
-        img {
-            border: 2px solid beige;
-            border-radius: 5px;
-            display: block;
-            margin: 0 auto;
-            width: 400px;
-            height: 300px;
-        }
+            img {
+                border: 2px solid beige;
+                border-radius: 5px;
+                display: block;
+                margin: 0 auto;
+                width: 400px;
+                height: 300px;
+            }
 
-        .container {
-            width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid bisque;
-            border-radius: 5px;
-        }
-        h2 {
-            font-size: 1.5em; /* Tamaño de fuente */
-            color: salmon; /* Color del texto */
-            font-weight: bold; /* Grosor de la fuente */
+            .container {
+                width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: white;
+                border: 1px solid bisque;
+                border-radius: 5px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                color: salmon;
+                font-weight: bold;
+            }
+
+            .video-container {
+                position: relative;
+                overflow: hidden;
+                padding-top: 56.25%; /* Proporción de aspecto 16:9 (dividir la altura por el ancho y multiplicar por 100) */
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30%;
+            }
+
+            form {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input[type="text"],
+            textarea {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+
+            input[type="submit"] {
+                background-color: red;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: white;
+            }
             
+            .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
         }
 
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 style="text-align: center">Tienda en línea</h1>
-        <h2>Bienvenidos a la página de la Tienda en línea.</h2>
-     
+        .menu li {
+            display: inline-block;
+        }
 
+        .menu li a {
+            display: block;
+            color: orangered;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
+        .menu li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+            <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+            <h1>Tienda en línea</h1>
+            
+        </div>
         
-    </div>
+        <h2>Bienvenidos a la página de la Tienda en línea.</h2>
+        <p>El sol brilla en el cielo azul mientras las flores florecen en el jardín.</p>
+        <p>La gente camina por las calles, ocupada en sus quehaceres diarios.</p>
+        <p>Los pájaros cantan melodías alegres mientras el viento sopla suavemente entre los árboles.</p>
 
-    <p>El sol brilla en el cielo azul mientras las flores florecen en el jardín.</p>
-    <p>La gente camina por las calles, ocupada en sus quehaceres diarios.</p>
-    <p>Los pájaros cantan melodías alegres mientras el viento sopla suavemente entre los árboles.</p>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <div>
+            <img src="images/html.jpg" alt="logo html">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125806.11860733823!2d-84.34581754999999!3d9.81326075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa1ab6e2c76d161%3A0xd3dab9d3ebe22c8f!2sSan%20Jos%C3%A9%2C%20Puriscal!5e0!3m2!1ses-419!2scr!4v1685492281604!5m2!1ses-419!2scr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <div class="container">
-        <img src="images/html.jpg" alt="logo html">
-    </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/hKZMQVloVOM" frameborder="10" allowfullscreen></iframe>
+            </div>
 
-</body>
+            <form action="procesar_formulario.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+            
+           
+        </div>
+    </body>
 </html>
+
+
 
  
