@@ -3,6 +3,7 @@
     <head>
         <title>Tienda en línea</title>
         <meta charset="UTF-8">
+
         <!-- Agregar las URL de los archivos CSS de Bootstrap -->
         <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}">
         <style>
@@ -12,7 +13,7 @@
                 background-color: whitesmoke;
             }
 
-           
+
 
             h1 {
                 color: black;
@@ -29,18 +30,11 @@
                 border-radius: 5px;
                 display: block;
                 margin: 0 auto;
-                width: 300px;
-                height: 250px;
+                width: 200px;
+                height: 150px;
             }
 
-            .container {
-                width: 600px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: white;
-                border: 1px solid bisque;
-                border-radius: 5px;
-            }
+
 
             h2 {
                 font-size: 1.5em;
@@ -48,7 +42,7 @@
                 font-weight: bold;
             }
 
-            
+
 
             ul.menu {
                 list-style-type: none; /* Eliminar viñetas de la lista */
@@ -74,68 +68,78 @@
                 background-color: #111; /* Color de fondo al pasar el cursor sobre los enlaces */
             }
 
+            .container {
+                width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: white;
+                border: 1px solid bisque;
+                border-radius: 5px;
+            }
+
         </style>
     </head>
-    <body>
+    <head>
+
         <!-- Barra de menú -->
-        <ul class="menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </body>
+    <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</body>
 </html>
 
 </style>
 </head>
 <body>
-  
 
 
-    <h2>Bienvenidos a la página de la Tienda en línea.</h2>
-    
 
-    <br>
-    <br>
+    <h2>Bienvenidos a la página de la Tienda en línea.</h2>.
 
-    <div class="container">
-        <!-- Agregar clases de Bootstrap para alinear y ajustar el tamaño de la imagen y el iframe -->
-        <div class="row justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img class="img-fluid" src="images/html.jpg" alt="logo html">
+
+        </div>
+      
+        <br>
+        <br>
+
+        <div class="container">
             <div class="col-md-6">
-                <img class="img-fluid" src="images/html.jpg" alt="logo html">
+                <div class="row justify-content-center">
+                    <div class="embed-responsive embed-responsive-16by9">
 
-            </div>
-            <div class="col-md-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125806.11860733823!2d-84.34581754999999!3d9.81326075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa1ab6e2c76d161%3A0xd3dab9d3ebe22c8f!2sSan%20Jos%C3%A9%2C%20Puriscal!5e0!3m2!1ses-419!2scr!4v1685492281604!5m2!1ses-419!2scr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125806.11860733823!2d-84.34581754999999!3d9.81326075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa1ab6e2c76d161%3A0xd3dab9d3ebe22c8f!2sSan%20Jos%C3%A9%2C%20Puriscal!5e0!3m2!1ses-419!2scr!4v1685492281604!5m2!1ses-419!2scr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/hKZMQVloVOM" frameborder="10" allowfullscreen></iframe>
-        </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/hKZMQVloVOM" frameborder="10" allowfullscreen></iframe>
+            </div>
+            
+            <h3>Form</h3>
 
-        <!-- Agregar un formulario de ejemplo utilizando Thymeleaf para el procesamiento -->
-        <form th:action="@{/procesar_formulario}" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <form action="/action_page.php">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <input type="submit" value="Submit">
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
+            </form> 
+            
 
-            <input type="submit" class="btn btn-primary" value="Enviar">
-        </form>
-    </div>
 
-    <!-- Agregar los archivos JavaScript de Bootstrap al final del cuerpo -->
-    <script th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.min.js}"></script>
-</body>
-</html>
+           
+
+
+            </html>
 
 
 
